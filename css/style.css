@@ -374,8 +374,10 @@ img { max-width: 100%; display: block; }
 .product-card:hover .product-card__body h3 { color: var(--gold-light); }
 .product-card__body .price {
   color: var(--gold-light);
-  font-weight: 800;
-  font-size: 22px;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .3px;
   margin: 0 0 16px;
 }
 

@@ -26,7 +26,7 @@ Mezclá Feed con Reels cuando puedas — un Reel corto (15-20s, timelapse de ins
 **Caption:**
 > Piedra de Campo 🪨 uno de nuestros diseños más pedidos.
 > Textura irregular tipo piedra natural, 100% hormigón premoldeado.
-> 💰 $80.000 por panel — instalación incluida.
+> 💰 Presupuesto según m² — instalación incluida.
 > ¿Le damos vida a tu cerco? Escribinos por WhatsApp (link en bio).
 
 **Hashtags:** #premoldeados #cercospremoldeados #hormigon #construccion #buenosaires #amba #cercosdehormigon #muros #premoldeadosma
@@ -48,7 +48,7 @@ Mezclá Feed con Reels cuando puedas — un Reel corto (15-20s, timelapse de ins
 **Foto:** `images/products/simil-laja.jpg`
 **Caption:**
 > Símil Laja 🌾 terminación tipo piedra laja, para un estilo rústico y cálido.
-> Elegí entre 6 diseños distintos, todos al mismo precio: $80.000 por panel.
+> Elegí entre 6 diseños distintos. Presupuesto a medida según los m² de tu cerco.
 > ¿Cuál es tu favorito? Contanos en los comentarios 👇
 
 **Hashtags:** #premoldeados #similLaja #cercos #hormigon #diseñoexterior #jardines
@@ -73,7 +73,7 @@ Mezclá Feed con Reels cuando puedas — un Reel corto (15-20s, timelapse de ins
 **Foto:** `images/products/simil-bloque.jpg`
 **Caption:**
 > Símil Bloque 🧱 líneas prolijas y look moderno para tu muro perimetral.
-> Mismo precio que el resto: $80.000 por panel.
+> Todos nuestros diseños incluyen instalación y garantía por escrito.
 > Todos nuestros diseños incluyen instalación y garantía por escrito.
 
 **Hashtags:** #similbloque #premoldeados #muros #cercosdehormigon #buenosaires
