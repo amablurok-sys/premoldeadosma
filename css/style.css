@@ -45,11 +45,11 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 10px 24px;
+  padding: 6px 24px;
 }
 
 .header__brand { flex-shrink: 0; }
-.header__logo { height: 52px; width: auto; }
+.header__logo { height: 78px; width: auto; }
 
 .nav {
   display: flex;
