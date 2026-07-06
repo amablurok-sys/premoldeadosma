@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://premoldeadosma.com.ar/sitemap.xml
+Sitemap: https://premoldeadosma.com/sitemap.xml
