@@ -95,3 +95,57 @@ if (prefersReduced || !("IntersectionObserver" in window)) {
     });
   }, 3000);
 }
+
+/* ---- Lightbox de galería ---- */
+const lightbox = document.getElementById("lightbox");
+const galleryLinks = Array.from(document.querySelectorAll(".gallery-grid a"));
+if (lightbox && galleryLinks.length) {
+  const lbImg = document.getElementById("lightboxImg");
+  const lbCaption = document.getElementById("lightboxCaption");
+  const btnClose = document.getElementById("lightboxClose");
+  const btnPrev = document.getElementById("lightboxPrev");
+  const btnNext = document.getElementById("lightboxNext");
+  const items = galleryLinks.map((a) => ({
+    src: a.getAttribute("href"),
+    caption: (a.querySelector("img") && a.querySelector("img").alt) || ""
+  }));
+  let current = 0;
+  let lastFocused = null;
+
+  const render = () => {
+    const it = items[current];
+    lbImg.src = it.src;
+    lbImg.alt = it.caption;
+    lbCaption.textContent = it.caption;
+  };
+  const openAt = (i) => {
+    current = i;
+    lastFocused = document.activeElement;
+    render();
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("no-scroll");
+    btnClose.focus();
+  };
+  const close = () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("no-scroll");
+    if (lastFocused) lastFocused.focus();
+  };
+  const go = (dir) => { current = (current + dir + items.length) % items.length; render(); };
+
+  galleryLinks.forEach((a, i) =>
+    a.addEventListener("click", (e) => { e.preventDefault(); openAt(i); })
+  );
+  btnClose.addEventListener("click", close);
+  btnPrev.addEventListener("click", () => go(-1));
+  btnNext.addEventListener("click", () => go(1));
+  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("is-open")) return;
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowLeft") go(-1);
+    else if (e.key === "ArrowRight") go(1);
+  });
+}
