@@ -11,9 +11,14 @@ document.querySelectorAll("[data-wa-message]").forEach((el) => {
 const navToggle = document.getElementById("navToggle");
 const nav = document.getElementById("nav");
 if (navToggle && nav) {
-  navToggle.addEventListener("click", () => nav.classList.toggle("is-open"));
+  navToggle.setAttribute("aria-expanded", "false");
+  const setNav = (open) => {
+    nav.classList.toggle("is-open", open);
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  navToggle.addEventListener("click", () => setNav(!nav.classList.contains("is-open")));
   nav.querySelectorAll("a").forEach((link) =>
-    link.addEventListener("click", () => nav.classList.remove("is-open"))
+    link.addEventListener("click", () => setNav(false))
   );
 }
 
@@ -39,4 +44,54 @@ if (quoteForm) {
 
     window.open(buildWaLink(text), "_blank");
   });
+}
+
+/* ---- Animaciones al hacer scroll (reveal) + conteo de stats ---- */
+const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+// Marca que hay JS: recién ahí el CSS oculta los .reveal. Sin JS se ve todo normal.
+document.documentElement.classList.add("js");
+
+// Marcar bloques a revelar (a nivel contenedor para no interferir con hovers)
+const revealSelectors = [
+  ".about", ".process-grid", ".product-grid", ".gallery-grid",
+  ".testimonial-grid", ".payment-grid", ".contact", ".section__title"
+];
+document.querySelectorAll(revealSelectors.join(",")).forEach((el) => el.classList.add("reveal"));
+
+const animateCount = (el) => {
+  const target = parseFloat(el.getAttribute("data-count"));
+  const suffix = el.getAttribute("data-suffix") || "";
+  if (isNaN(target)) return;
+  const duration = 1200;
+  const start = performance.now();
+  const step = (now) => {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * eased) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+
+const revealEls = document.querySelectorAll(".reveal");
+if (prefersReduced || !("IntersectionObserver" in window)) {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+} else {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      entry.target.querySelectorAll("[data-count]").forEach(animateCount);
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  revealEls.forEach((el) => observer.observe(el));
+
+  // Red de seguridad: si algo falla, revelar todo tras 3s para nunca dejar contenido oculto.
+  setTimeout(() => {
+    document.querySelectorAll(".reveal:not(.is-visible)").forEach((el) => {
+      el.classList.add("is-visible");
+      el.querySelectorAll("[data-count]").forEach(animateCount);
+    });
+  }, 3000);
 }

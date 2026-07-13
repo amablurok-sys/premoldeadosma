@@ -45,6 +45,65 @@
     { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Panel premoldeado Símil Bloque" } },
     { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Panel premoldeado Símil Laja" } },
     { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Panel premoldeado Símil Madera" } }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Sofía" },
+      "reviewBody": "Quedé muy contenta con cómo terminó mi muro, quedó impecable."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "César" },
+      "reviewBody": "Quedó buenísimo, nos gustó mucho. Ya estamos pensando en hacer la otra parte del cerco."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Javier" },
+      "reviewBody": "Estamos muy contentos con el resultado, superó lo que esperábamos."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Hacen la instalación o solo venden los paneles?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nos ocupamos de todo el proceso: fabricamos los paneles y las columnas, los trasladamos e instalamos con nuestro propio equipo. Entregás tu cerco terminado y listo." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué zonas trabajan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cubrimos toda la Provincia de Buenos Aires y el AMBA. Si tenés dudas sobre tu localidad, escribinos por WhatsApp con la ubicación y te confirmamos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se calcula el presupuesto?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El precio se arma según los metros lineales de tu cerco y el modelo de panel elegido. Contanos las medidas y el diseño y te pasamos una cotización a medida, sin cargo ni compromiso." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye la garantía?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cada trabajo terminado queda respaldado con un certificado de garantía por escrito sobre la fabricación e instalación de tus paneles." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué medios de pago aceptan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Aceptamos efectivo, divisa (USD), tarjeta y criptomonedas. Elegí la forma que más te convenga." }
+    }
   ]
 }
 </script>
@@ -61,6 +120,7 @@
       <a href="#nosotros">Nosotros</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#galeria">Galería</a>
+      <a href="#faq">FAQ</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <a class="btn btn--whatsapp header__cta" data-wa-message="Hola! Quiero cotizar un muro premoldeado." href="#">
@@ -118,10 +178,34 @@
       </ul>
     </div>
     <div class="about__media">
-      <img src="images/gallery-3.jpg" alt="Muro premoldeado Premoldeados M.A instalado">
+      <picture>
+        <source srcset="images/gallery-3.webp" type="image/webp">
+        <img src="images/gallery-3.jpg" alt="Muro premoldeado Premoldeados M.A instalado" width="591" height="443" loading="lazy" decoding="async">
+      </picture>
     </div>
   </div>
 </section>
+
+<div class="stats reveal">
+  <div class="container stats__inner">
+    <div class="stat">
+      <div class="stat__number" data-count="8" data-suffix="+">8+</div>
+      <div class="stat__label">Años fabricando premoldeados</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number" data-count="500" data-suffix="+ m²">500+ m²</div>
+      <div class="stat__label">Instalados en obra</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number" data-count="6">6</div>
+      <div class="stat__label">Diseños a elección</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number" data-count="100" data-suffix="%">100%</div>
+      <div class="stat__label">Con garantía escrita</div>
+    </div>
+  </div>
+</div>
 
 <section class="section section--tight" id="proceso">
   <div class="container">
@@ -157,7 +241,7 @@
 
       <article class="product-card">
         <div class="product-card__media">
-          <img src="images/products/piedra-de-campo.jpg" alt="Panel premoldeado Piedra de Campo">
+          <picture><source srcset="images/products/piedra-de-campo.webp" type="image/webp"><img src="images/products/piedra-de-campo.jpg" alt="Panel premoldeado Piedra de Campo" width="501" height="659" loading="lazy" decoding="async"></picture>
         </div>
         <div class="product-card__body">
           <h3>Piedra de Campo</h3>
@@ -168,7 +252,7 @@
 
       <article class="product-card">
         <div class="product-card__media">
-          <img src="images/products/simil-laja.jpg" alt="Panel premoldeado Símil Laja">
+          <picture><source srcset="images/products/simil-laja.webp" type="image/webp"><img src="images/products/simil-laja.jpg" alt="Panel premoldeado Símil Laja" width="544" height="570" loading="lazy" decoding="async"></picture>
         </div>
         <div class="product-card__body">
           <h3>Símil Laja</h3>
@@ -179,7 +263,7 @@
 
       <article class="product-card">
         <div class="product-card__media">
-          <img src="images/products/simil-bloque.jpg" alt="Panel premoldeado Símil Bloque">
+          <picture><source srcset="images/products/simil-bloque.webp" type="image/webp"><img src="images/products/simil-bloque.jpg" alt="Panel premoldeado Símil Bloque" width="540" height="554" loading="lazy" decoding="async"></picture>
         </div>
         <div class="product-card__body">
           <h3>Símil Bloque</h3>
@@ -190,7 +274,7 @@
 
       <article class="product-card">
         <div class="product-card__media">
-          <img src="images/products/quebracho-remachado.jpg" alt="Panel premoldeado Quebracho Remachado">
+          <picture><source srcset="images/products/quebracho-remachado.webp" type="image/webp"><img src="images/products/quebracho-remachado.jpg" alt="Panel premoldeado Quebracho Remachado" width="573" height="599" loading="lazy" decoding="async"></picture>
         </div>
         <div class="product-card__body">
           <h3>Quebracho Remachado</h3>
@@ -201,7 +285,7 @@
 
       <article class="product-card">
         <div class="product-card__media">
-          <img src="images/products/madera-y-cruz.jpg" alt="Panel premoldeado Madera y Cruz">
+          <picture><source srcset="images/products/madera-y-cruz.webp" type="image/webp"><img src="images/products/madera-y-cruz.jpg" alt="Panel premoldeado Madera y Cruz" width="566" height="570" loading="lazy" decoding="async"></picture>
         </div>
         <div class="product-card__body">
           <h3>Madera y Cruz</h3>
@@ -212,7 +296,7 @@
 
       <article class="product-card">
         <div class="product-card__media">
-          <img src="images/products/simil-madera.jpg" alt="Panel premoldeado Símil Madera">
+          <picture><source srcset="images/products/simil-madera.webp" type="image/webp"><img src="images/products/simil-madera.jpg" alt="Panel premoldeado Símil Madera" width="554" height="533" loading="lazy" decoding="async"></picture>
         </div>
         <div class="product-card__body">
           <h3>Símil Madera</h3>
@@ -230,10 +314,10 @@
     <span class="eyebrow">Galería</span>
     <h2 class="section__title">Trabajos realizados</h2>
     <div class="gallery-grid">
-      <a href="images/gallery-1.jpg" target="_blank" rel="noopener"><img src="images/gallery-1.jpg" alt="Muro premoldeado con portón instalado"></a>
-      <a href="images/gallery-2.jpg" target="_blank" rel="noopener"><img src="images/gallery-2.jpg" alt="Instalación de muro premoldeado en proceso"></a>
-      <a href="images/hero.jpg" target="_blank" rel="noopener"><img src="images/hero.jpg" alt="Muro premoldeado terminado"></a>
-      <a href="images/products/simil-bloque.jpg" target="_blank" rel="noopener"><img src="images/products/simil-bloque.jpg" alt="Panel símil bloque instalado"></a>
+      <a href="images/gallery-1.jpg" target="_blank" rel="noopener"><picture><source srcset="images/gallery-1.webp" type="image/webp"><img src="images/gallery-1.jpg" alt="Muro premoldeado con portón instalado" width="760" height="1013" loading="lazy" decoding="async"></picture></a>
+      <a href="images/gallery-2.jpg" target="_blank" rel="noopener"><picture><source srcset="images/gallery-2.webp" type="image/webp"><img src="images/gallery-2.jpg" alt="Instalación de muro premoldeado en proceso" width="760" height="1013" loading="lazy" decoding="async"></picture></a>
+      <a href="images/hero.jpg" target="_blank" rel="noopener"><picture><source srcset="images/hero.webp" type="image/webp"><img src="images/hero.jpg" alt="Muro premoldeado terminado" width="1086" height="1448" loading="lazy" decoding="async"></picture></a>
+      <a href="images/products/simil-bloque.jpg" target="_blank" rel="noopener"><picture><source srcset="images/products/simil-bloque.webp" type="image/webp"><img src="images/products/simil-bloque.jpg" alt="Panel símil bloque instalado" width="540" height="554" loading="lazy" decoding="async"></picture></a>
     </div>
   </div>
 </section>
@@ -244,14 +328,35 @@
     <h2 class="section__title section__title--light">Lo que dicen nuestros clientes</h2>
     <div class="testimonial-grid">
       <div class="testimonial-card">
+        <span class="stars" aria-label="5 de 5 estrellas">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+        </span>
         <p class="testimonial-card__quote">"Quedé muy contenta con cómo terminó mi muro, quedó impecable."</p>
         <p class="testimonial-card__author">Sofía</p>
       </div>
       <div class="testimonial-card">
+        <span class="stars" aria-label="5 de 5 estrellas">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+        </span>
         <p class="testimonial-card__quote">"Quedó buenísimo, nos gustó mucho. Ya estamos pensando en hacer la otra parte del cerco."</p>
         <p class="testimonial-card__author">César — cerco de 10m</p>
       </div>
       <div class="testimonial-card">
+        <span class="stars" aria-label="5 de 5 estrellas">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 9.5l6.9-.6z"/></svg>
+        </span>
         <p class="testimonial-card__quote">"Estamos muy contentos con el resultado, superó lo que esperábamos."</p>
         <p class="testimonial-card__author">Javier — cerco de 13m</p>
       </div>
@@ -281,6 +386,43 @@
         <svg viewBox="0 0 24 24" class="payment-card__icon"><circle cx="12" cy="12" r="10"/><text x="12" y="16.5" text-anchor="middle" font-size="10" fill="#1a1a18" font-weight="700">₿</text></svg>
         <h3>Criptomonedas</h3>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <span class="eyebrow">Preguntas frecuentes</span>
+    <h2 class="section__title">Lo que más nos consultan</h2>
+    <div class="faq reveal">
+      <details class="faq__item">
+        <summary>¿Hacen la instalación o solo venden los paneles?</summary>
+        <div class="faq__answer">Nos ocupamos de todo el proceso: fabricamos los paneles y las columnas, los trasladamos e instalamos con nuestro propio equipo. Entregás tu cerco terminado y listo.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿En qué zonas trabajan?</summary>
+        <div class="faq__answer">Cubrimos toda la Provincia de Buenos Aires y el AMBA. Si tenés dudas sobre tu localidad, escribinos por WhatsApp con la ubicación y te confirmamos.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué medidas y alturas tienen los muros?</summary>
+        <div class="faq__answer">Trabajamos distintas alturas según lo que necesites para tu cerco perimetral. Contanos las medidas de tu terreno y te asesoramos con la configuración de paneles y columnas más conveniente.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Cómo se calcula el presupuesto?</summary>
+        <div class="faq__answer">El precio se arma según los metros lineales de tu cerco y el modelo de panel elegido. Contanos las medidas y el diseño y te pasamos una cotización a medida, sin cargo ni compromiso.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Cuánto demora la fabricación e instalación?</summary>
+        <div class="faq__answer">Los plazos dependen de la cantidad de metros y del modelo. Al momento de cotizar te confirmamos un tiempo estimado de fabricación y la fecha de instalación.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué incluye la garantía?</summary>
+        <div class="faq__answer">Cada trabajo terminado queda respaldado con un certificado de garantía por escrito sobre la fabricación e instalación de tus paneles.</div>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué medios de pago aceptan?</summary>
+        <div class="faq__answer">Aceptamos efectivo, divisa (USD), tarjeta y criptomonedas. Elegí la forma que más te convenga.</div>
+      </details>
     </div>
   </div>
 </section>
