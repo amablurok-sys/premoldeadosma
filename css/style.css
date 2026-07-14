@@ -619,6 +619,25 @@ img { max-width: 100%; display: block; }
 .whatsapp-float:hover { transform: scale(1.08); }
 .whatsapp-float .icon { width: 30px; height: 30px; fill: #fff; }
 
+/* Call float */
+.call-float {
+  position: fixed;
+  bottom: 92px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  z-index: 200;
+  transition: transform .2s;
+}
+.call-float:hover { transform: scale(1.08); }
+.call-float .icon { width: 27px; height: 27px; fill: var(--black); }
+
 /* Picture wrapper — que no genere caja y el img se comporte como hijo directo */
 picture { display: contents; }
 
