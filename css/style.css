@@ -724,6 +724,47 @@ picture { display: contents; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+/* CTA banner */
+.cta-banner {
+  position: relative;
+  padding: 100px 0;
+  color: #fff;
+  text-align: center;
+  background-color: var(--black);
+  background-image: url('../images/banner-cta.jpg');
+  background-image: image-set(url('../images/banner-cta.webp') type('image/webp'), url('../images/banner-cta.jpg') type('image/jpeg'));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.cta-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,18,14,.72), rgba(20,18,14,.84));
+}
+.cta-banner__content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+.cta-banner__content h2 {
+  font-family: 'Anton', var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(28px, 4.5vw, 46px);
+  line-height: 1.1;
+  margin: 6px 0 16px;
+}
+.cta-banner__content p {
+  font-size: 17px;
+  color: #e9e7e0;
+  margin: 0 auto 28px;
+  max-width: 600px;
+}
+@media (max-width: 900px) {
+  .cta-banner { background-attachment: scroll; padding: 70px 0; }
+}
+
 /* Lightbox */
 .lightbox {
   position: fixed;
